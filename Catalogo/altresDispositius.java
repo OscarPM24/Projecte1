@@ -1,3 +1,5 @@
+package Catalogo;
+
 public class altresDispositius {
     String marca = " ";
     String modelo = " ";

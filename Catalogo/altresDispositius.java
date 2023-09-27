@@ -1,10 +1,10 @@
-public class constructorAltresDispositius {
+public class altresDispositius {
     String marca = " ";
     String modelo = " ";
     int PreuBase =  0;
     String  descripcio = " ";
 
-    public constructorAltresDispositius() {
+    public altresDispositius() {
     }
 
     public String getMarca() {
@@ -38,5 +38,11 @@ public class constructorAltresDispositius {
     public void setDescripcio(String descripcio) {
         this.descripcio = descripcio;
     }
+
+    @Override
+    public String toString() {
+        return "altresDispositius{" + "marca=" + marca + ", modelo=" + modelo + ", PreuBase=" + PreuBase + ", descripcio=" + descripcio + '}';
+    }
+    
     
 }

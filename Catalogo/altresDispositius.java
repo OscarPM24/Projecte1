@@ -7,6 +7,7 @@ public class altresDispositius {
     String  descripcio = " ";
 
     public altresDispositius() {
+        
     }
 
     public String getMarca() {
@@ -43,8 +44,10 @@ public class altresDispositius {
 
     @Override
     public String toString() {
-        return "altresDispositius{" + "marca=" + marca + ", modelo=" + modelo + ", PreuBase=" + PreuBase + ", descripcio=" + descripcio + '}';
+        return "altresDispositius{" + "marca= " + marca + ", modelo= " + modelo + ", PreuBase= " + PreuBase + ", descripcio= " + descripcio + '}';
     }
     
-    
+    public int preuFinalAltres (int preuBase) { 
+        return preuBase*2;
+    }
 }

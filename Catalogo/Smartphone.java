@@ -2,7 +2,7 @@ package Catalogo;
 /* Clase Smartphone, con constructor, getters y setters y toString.
  * També implementa el mètode isGammaAlta de la interfície GammaAlta. */
 
-public class Smartphone {
+public class Smartphone extends Main {
     // Variables del smartphone
     private String marca;
     private String model;

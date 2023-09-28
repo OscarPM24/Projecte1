@@ -1,9 +1,10 @@
 package Catalogo;
-public class altresDispositius {
-    String marca;
-    String model;
-    double preuBase;
-    String  descripcio;
+public class altresDispositius extends Main {
+    private String marca;
+    private String model;
+    private double preuBase;
+    private String descripcio;
+    private double preuFinal;
 
     //Constructor de altresDispositus
     public altresDispositius (String marca, String model,  double preuBase, String descripcio) {
@@ -11,6 +12,7 @@ public class altresDispositius {
         this.model= model;
         this.preuBase= preuBase;
         this.descripcio= descripcio;
+        this.preuFinal = preuFinalAltres(preuBase);
     }
 
     //Métodos de clase de altresDispositius
@@ -45,11 +47,15 @@ public class altresDispositius {
     public void setDescripcio(String descripcio) {
         this.descripcio = descripcio;
     }
-
+    
     @Override
     public String toString() {
-        return "altresDispositius{" + "marca= " + marca + ", model= " + model + ", preuBase= " + preuBase + ", descripcio= " + descripcio + '}';
-    }
+        return "\n  Marca: " + this.marca
+             + "\n  Model: " + this.model
+             + "\n  Preu base: " + this.preuBase
+             + "\n  Descripcio: " + this.descripcio
+             + "\n  Preu final: " + this.preuFinal;
+        }
     
     public double preuFinalAltres(double preuBase) { 
         return preuBase*2;

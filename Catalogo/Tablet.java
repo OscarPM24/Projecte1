@@ -10,12 +10,14 @@ public class Tablet extends Main {
     private String model;
     private double preuBase;
     private int pulgadas;
+    private double preuFinal;
 
     public Tablet(String marca, String model,  double preuBase, int pulgadas) {
         this.marca= marca;
         this.model= model;
         this.preuBase= preuBase;
         this.pulgadas= pulgadas;
+        this.preuFinal = preuFinalTablet(preuBase);
     }
 
     //SETTERS
@@ -37,8 +39,11 @@ public class Tablet extends Main {
 
     @Override
     public String toString(){
-        String frase = ("Aquesta tablet té un preu base de " + getPreuBase() + ", és de la marca "+ getMarca()+ " i model" + getModel() + " amb " + getPulgadas() + "polsades");
-        return frase;
+        return "\n  Marca: " + this.marca
+             + "\n  Model: " + this.model
+             + "\n  Preu base: " + this.preuBase
+             + "\n  Polzades: " + this.pulgadas
+             + "\n  Preu final: " + this.preuFinal;
     }
     
       public double preuFinalTablet (double preuBase) { 

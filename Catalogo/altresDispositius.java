@@ -1,19 +1,19 @@
 package Catalogo;
-
 public class altresDispositius {
-    String marca = " ";
-    String model = " ";
-    double preuBase =  0;
-    String  descripcio = " ";
+    String marca;
+    String model;
+    double preuBase;
+    String  descripcio;
 
+    //Constructor de altresDispositus
     public altresDispositius (String marca, String model,  double preuBase, String descripcio) {
         this.marca= marca;
         this.model= model;
         this.preuBase= preuBase;
         this.descripcio= descripcio;
     }
-    
 
+    //Métodos de clase de altresDispositius
     public String getMarca() {
         return marca;
     }
@@ -51,7 +51,7 @@ public class altresDispositius {
         return "altresDispositius{" + "marca= " + marca + ", model= " + model + ", preuBase= " + preuBase + ", descripcio= " + descripcio + '}';
     }
     
-    public int preuFinalAltres (double preuBase) { 
+    public double preuFinalAltres(double preuBase) { 
         return preuBase*2;
     }
 }

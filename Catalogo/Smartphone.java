@@ -6,17 +6,19 @@ public class Smartphone {
     // Variables del smartphone
     private String marca;
     private String model;
-    private int preuBase;
+    private double preuBase;
     private boolean accelerometre = false;
     private boolean gps = true;
+    private double preuFinal;
    
     // Constructor del smartphone
-    public Smartphone(String marca, String model, int preuBase, boolean accelerometre, boolean gps) {
+    public Smartphone(String marca, String model, double preuBase, boolean accelerometre, boolean gps) {
         this.marca = marca;
         this.model = model;
         this.preuBase = preuBase;
         this.accelerometre = accelerometre;
         this.gps = gps;
+        this.preuFinal = preuFinalSmartphone(preuBase);
     }
 
     // Getters y setters de cada atributo del Smartphone
@@ -36,11 +38,11 @@ public class Smartphone {
         this.model = model;
     }
 
-    public int getPreuBase() {
+    public double getPreuBase() {
         return preuBase;
     }
 
-    public void setPreuBase(int preuBase) {
+    public void setPreuBase(double preuBase) {
         this.preuBase = preuBase;
     }
 
@@ -67,11 +69,21 @@ public class Smartphone {
              + "\n  Model: " + this.model
              + "\n  Preu base: " + this.preuBase
              + "\n  Accelerometre: " + this.accelerometre
-             + "\n  GPS: " + this.gps;
+             + "\n  GPS: " + this.gps
+             + "\n  Preu final: " + this.preuFinal; 
     }
     
-    // Mètode implementat de la interfície GammaAlta
-    public boolean isGammaAlta() {
-        return preuFinal > 700;
+    public double preuFinalSmartphone(double preuBase) {
+        preuBase = preuBase * 2;
+        if (accelerometre == true) { 
+            if(gps == true){ // si gps i acc es true
+                preuBase = (preuBase *2) *0.10;
+                return preuBase + preuBase*0.05;
+            } 
+            preuBase = (preuBase *2) *0.10;
+            return preuBase; // si acc es true i gps es false
+        }
+        return preuBase;
     }
 }
+

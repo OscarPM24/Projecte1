@@ -3,15 +3,15 @@ package Catalogo;
  * Té setters, getters i toString. Marca, model, preu base i nombre de polsades.
  * També implementa el mètode isGammaAlta de la interfície GammaAlta */
 
-public class Tablet implements GammaAlta {
+public class Tablet extends Main {
     // CONSTRUCTOR
 
     private String marca;
     private String model;
-    private int preuBase;
+    private double preuBase;
     private int pulgadas;
 
-    public Tablet(String marca, String model,  int preuBase, int pulgadas) {
+    public Tablet(String marca, String model,  double preuBase, int pulgadas) {
         this.marca= marca;
         this.model= model;
         this.preuBase= preuBase;
@@ -30,7 +30,7 @@ public class Tablet implements GammaAlta {
     //GETTERS
     public String getMarca() { return this.marca; }
     public String getModel() { return this.model; }
-    public int getPreuBase() { return this.preuBase; }
+    public double getPreuBase() { return this.preuBase; }
     public int getPulgadas() { return this.pulgadas; }
 
     //TO STRING
@@ -40,9 +40,9 @@ public class Tablet implements GammaAlta {
         String frase = ("Aquesta tablet té un preu base de " + getPreuBase() + ", és de la marca "+ getMarca()+ " i model" + getModel() + " amb " + getPulgadas() + "polsades");
         return frase;
     }
-
-    // Mètode implementat de la interfície GammaAlta
-    public boolean isGammaAlta() {
-        return preuFinal > 900;
+    
+      public double preuFinalTablet (double preuBase) { 
+        return preuBase*2;
     }
+    
 }

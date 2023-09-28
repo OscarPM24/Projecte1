@@ -2,13 +2,17 @@ package Catalogo;
 
 public class altresDispositius {
     String marca = " ";
-    String modelo = " ";
-    int PreuBase =  0;
+    String model = " ";
+    double preuBase =  0;
     String  descripcio = " ";
 
-    public altresDispositius() {
-        
+    public altresDispositius (String marca, String model,  double preuBase, String descripcio) {
+        this.marca= marca;
+        this.model= model;
+        this.preuBase= preuBase;
+        this.descripcio= descripcio;
     }
+    
 
     public String getMarca() {
         return marca;
@@ -18,20 +22,20 @@ public class altresDispositius {
         this.marca = marca;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModel() {
+        return model;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public int getPreuBase() {
-        return PreuBase;
+    public double getPreuBase() {
+        return preuBase;
     }
 
-    public void setPreuBase(int PreuBase) {
-        this.PreuBase = PreuBase;
+    public void setPreuBase(double preuBase) {
+        this.preuBase = preuBase;
     }
 
     public String getDescripcio() {
@@ -44,10 +48,10 @@ public class altresDispositius {
 
     @Override
     public String toString() {
-        return "altresDispositius{" + "marca= " + marca + ", modelo= " + modelo + ", PreuBase= " + PreuBase + ", descripcio= " + descripcio + '}';
+        return "altresDispositius{" + "marca= " + marca + ", model= " + model + ", preuBase= " + preuBase + ", descripcio= " + descripcio + '}';
     }
     
-    public int preuFinalAltres (int preuBase) { 
+    public int preuFinalAltres (double preuBase) { 
         return preuBase*2;
     }
 }

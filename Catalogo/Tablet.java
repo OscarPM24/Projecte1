@@ -5,10 +5,10 @@ public class Tablet {
 
     private String marca;
     private String model;
-    private int preuBase;
+    private double preuBase;
     private int pulgadas;
 
-    public Tablet(String marca, String model,  int preuBase, int pulgadas) {
+    public Tablet(String marca, String model,  double preuBase, int pulgadas) {
         this.marca= marca;
         this.model= model;
         this.preuBase= preuBase;
@@ -27,7 +27,7 @@ public class Tablet {
     //GETTERS
     public String getMarca() { return this.marca; }
     public String getModel() { return this.model; }
-    public int getPreuBase() { return this.preuBase; }
+    public double getPreuBase() { return this.preuBase; }
     public int getPulgadas() { return this.pulgadas; }
 
     //TO STRING
@@ -38,7 +38,7 @@ public class Tablet {
         return frase;
     }
     
-      public int preuFinalTablet (int preuBase) { 
+      public int preuFinalTablet (double preuBase) { 
         return preuBase*2;
     }
     

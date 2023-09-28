@@ -1,6 +1,9 @@
 package Catalogo;
-// métodes d'instancia de la class Tablet. Té setters, getters i toString. Marca, model, preu base i nombre de polsades
-public class Tablet {
+/* Classe Tablet que conté el constructor de Tablet, métodes d'instancia de la class Tablet.
+ * Té setters, getters i toString. Marca, model, preu base i nombre de polsades.
+ * També implementa el mètode isGammaAlta de la interfície GammaAlta */
+
+public class Tablet implements GammaAlta {
     // CONSTRUCTOR
 
     private String marca;
@@ -36,5 +39,10 @@ public class Tablet {
     public String toString(){
         String frase = ("Aquesta tablet té un preu base de " + getPreuBase() + ", és de la marca "+ getMarca()+ " i model" + getModel() + " amb " + getPulgadas() + "polsades");
         return frase;
+    }
+
+    // Mètode implementat de la interfície GammaAlta
+    public boolean isGammaAlta() {
+        return preuFinal > 900;
     }
 }

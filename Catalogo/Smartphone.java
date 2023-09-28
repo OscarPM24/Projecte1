@@ -1,5 +1,6 @@
 package Catalogo;
-/* Clase Smartphone, con constructor, getters y setters y toString */
+/* Clase Smartphone, con constructor, getters y setters y toString.
+ * També implementa el mètode isGammaAlta de la interfície GammaAlta. */
 
 public class Smartphone {
     // Variables del smartphone
@@ -67,6 +68,10 @@ public class Smartphone {
              + "\n  Preu base: " + this.preuBase
              + "\n  Accelerometre: " + this.accelerometre
              + "\n  GPS: " + this.gps;
-
+    }
+    
+    // Mètode implementat de la interfície GammaAlta
+    public boolean isGammaAlta() {
+        return preuFinal > 700;
     }
 }

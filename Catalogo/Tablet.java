@@ -11,6 +11,7 @@ public class Tablet extends Main {
     private double preuBase;
     private int pulgadas;
     private double preuFinal;
+    private boolean gammaAlta;
 
     public Tablet(String marca, String model,  double preuBase, int pulgadas) {
         this.marca= marca;
@@ -18,6 +19,7 @@ public class Tablet extends Main {
         this.preuBase= preuBase;
         this.pulgadas= pulgadas;
         this.preuFinal = preuFinalTablet(preuBase);
+        this.gammaAlta = isGammaAlta();
     }
 
     //SETTERS
@@ -43,11 +45,16 @@ public class Tablet extends Main {
              + "\n  Model: " + this.model
              + "\n  Preu base: " + this.preuBase
              + "\n  Polzades: " + this.pulgadas
-             + "\n  Preu final: " + this.preuFinal;
+             + "\n  Preu final: " + this.preuFinal
+             + "\n  Gamma alta: " + this.gammaAlta;
     }
     
       public double preuFinalTablet (double preuBase) { 
         return preuBase*2;
     }
-    
+
+    // Método isGammaAlta implementado de GammaAlta
+    public boolean isGammaAlta() {
+        return this.preuFinal > 900;
+    }
 }

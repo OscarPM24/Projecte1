@@ -37,4 +37,9 @@ public class Tablet {
         String frase = ("Aquesta tablet té un preu base de " + getPreuBase() + ", és de la marca "+ getMarca()+ " i model" + getModel() + " amb " + getPulgadas() + "polsades");
         return frase;
     }
+    
+      public int preuFinalTablet (int preuBase) { 
+        return preuBase*2;
+    }
+    
 }
